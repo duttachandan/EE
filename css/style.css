@@ -1,15 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-
 @font-face {
   font-family: objectivity;
-  src: url('../assets/font/objectivity.bold.otf');
+  src: url("../assets/font/objectivity.bold.otf");
 }
+
+@font-face {
+  font-family: objectivity-light;
+  src: url("../assets/font/objectivity.light.otf");
+}
+
+@font-face {
+  font-family: objectivity-thin;
+  src: url("../assets/font/Objectivity-Thin.woff");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
+body {
+  user-select: none;
+}
+
+/* Universal Cursor */
+
+.cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
 /* .playfair-display-<uniquifier> {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -51,6 +82,7 @@ header {
   top: 0;
   right: 0;
   padding: 15px 0;
+  z-index: 3;
 }
 
 .nav-collapse > ul,
@@ -103,12 +135,17 @@ nav {
 
 /* Banner Section */
 
-.banner-section {
+.bnr-section {
   min-height: 100vh;
   background: url("../assets/img/BG.png") center/cover no-repeat;
   border-radius: 0 0 100px 100px;
   padding: 87px 0 0;
   text-align: center;
+  position: relative;
+}
+
+.bnr-wrpr {
+  position: relative;
 }
 
 h1 {
@@ -121,7 +158,30 @@ h1 {
   );
   color: transparent;
   background-clip: text;
-  font-family: objectivity, serif;
+  font-family: objectivity-thin, serif;
+  font-size: 13.91vw;
+}
+
+h1 > span {
+  font-size: 5.47vw;
+}
+
+.prsn-img {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.prsn-img > div {
+  max-width: 1019px;
+  margin: 0 auto;
+}
+.prsn-img > div > img {
+  width: 100%;
+  max-height: 790px;
+  object-fit: contain;
 }
 
 /* Section Filler */
