@@ -1,3 +1,18 @@
+// luxy.js Initialization
+
+window.addEventListener("DOMContentLoaded", () => {
+  luxy.init();
+});
+
+//Paralax Js Initialization
+
+window.addEventListener("load", () => {
+  const scene = document.getElementById("scene");
+  new Parallax(scene);
+});
+
+// Cursor Js Implementation
+
 const cursor = document.querySelector(".cursor");
 let pos = { x: 0, y: 0 };
 let cursorPos = { x: 0, y: 0 };
@@ -16,4 +31,3 @@ function loop() {
 }
 
 requestAnimationFrame(loop);
-

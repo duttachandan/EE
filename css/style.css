@@ -21,6 +21,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #40409d;
+  --secondary-color: #ffffff;
+}
+
 html,
 body {
   user-select: none;
@@ -41,13 +46,6 @@ body {
   mix-blend-mode: difference;
 }
 
-/* .playfair-display-<uniquifier> {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
 .container {
   max-width: 1681px;
   margin: 0 auto;
@@ -59,6 +57,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
+}
+
+.col-50 {
+  width: 50%;
+  padding: 0 15px;
 }
 
 a {
@@ -91,10 +94,18 @@ nav {
   align-items: center;
 }
 
+.nav-logo > a {
+  width: 119px;
+}
+
+.nav-logo > a > img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .navbar-brand {
   position: relative;
   margin-left: auto;
-  /* height: fit-content; */
   width: 54px;
   height: 4.7px;
   background: white;
@@ -123,12 +134,6 @@ nav {
   border-radius: 1px;
 }
 
-/* .navbar-brand > span {
-  width: 54px;
-  height: 4.7px;
-  background: white;
-} */
-
 .nav-collapse {
   display: none;
 }
@@ -142,6 +147,7 @@ nav {
   padding: 87px 0 0;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 .bnr-wrpr {
@@ -168,7 +174,7 @@ h1 > span {
 
 .prsn-img {
   position: absolute;
-  bottom: -4px;
+  bottom: -10px;
   left: 0;
   right: 0;
   width: 100%;
@@ -184,7 +190,95 @@ h1 > span {
   object-fit: contain;
 }
 
+.rb-cnt {
+  max-width: 18.5vw;
+  position: absolute;
+  left: 15px;
+  bottom: 60px;
+  text-align: start;
+  color: white;
+}
+.rb-cnt > a,
+.lb-cnt > a {
+  width: 4vw;
+}
+.rb-cnt > a > img,
+.lb-cnt > a > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.rb-cnt > .rb-num,
+.lb-cnt > .lb-num {
+  font-size: 4.08vw;
+  font-weight: 100;
+  font-family: objectivity-thin, serif;
+  background: linear-gradient(
+    to left,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 1.2vw;
+}
+
+.rb-heading {
+  font-size: 2.19vw;
+}
+
+.lb-cnt {
+  max-width: 18.5vw;
+  position: absolute;
+  right: 15px;
+  bottom: 60px;
+  text-align: end;
+  color: white;
+}
+
+.lb-cnt > .lb-num {
+  background: linear-gradient(to left, #f59402, rgba(255, 255, 255, 0.5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lb-heading,
+.rb-heading {
+  font-family: objectivity-thin, serif;
+  font-size: 2vw;
+  margin: 22px 0;
+}
+
+.lb-heading + div,
+.rb-heading + div {
+  font-family: objectivity-thin, serif;
+  font-size: 1vw;
+  margin-bottom: 3vw;
+}
+
+.lb-cnt > .row,
+.rb-cnt > .row {
+  font-size: 1.04vw;
+  font-family: objectivity-thin, serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* Section Filler */
 .section2 {
   min-height: 100vh;
+}
+
+@media screen and (max-width:768px) {
+  
+}
+
+@media screen and (max-width: 576px) {
+  .nav-logo > a {
+    width: 45px;
+  }
+  .navbar-brand {
+    transform: scale(0.5);
+  }
 }

@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body id="luxy">
     <!-- Header Section -->
     <header>
       <div class="container">
@@ -32,7 +32,7 @@
     </header>
 
     <!-- Banner Section -->
-    <section class="bnr-section">
+    <section class="bnr-section luxy-el" data-speed-y="0.15" data-offset="-50">
       <div class="container">
         <div class="bnr-wrpr">
           <h1>
@@ -42,17 +42,69 @@
           </h1>
         </div>
       </div>
-      <div class="prsn-img">
+      <div class="prsn-img" id="scene">
+        <div data-depth="0.05">
+          <img src="./assets/img/bannerSubject.png" alt="" />
+        </div>
+      </div>
+      <div class="rb-cnt">
+        <a href="">
+          <img src="./assets/img/Arrow.png" alt="" />
+        </a>
+        <div class="rb-num">4000+</div>
+        <div class="rb-heading">Stores Across India</div>
         <div>
-          <img src="./assets/bannerSubject.png" alt="" />
+          Find us wherever you are with over 40,000 stores across India,
+          bringing quality eyewear closer to you!
+        </div>
+        <div class="row">
+          <div class="col-50">
+            <div>100+</div>
+            <p>Frame Styles to Suit Every Personality</p>
+          </div>
+          <div class="col-50">
+            <div>5 Million</div>
+            <p>Over 5 Million Satisfied Customers</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lb-cnt">
+        <a href="">
+          <img src="./assets/img/Arrow.png" alt="" />
+        </a>
+        <div class="lb-num">30</div>
+        <div class="lb-heading">Day Risk-Free Returns</div>
+        <div>
+          Find us wherever you are with over 40,000 stores across India,
+          bringing quality eyewear closer to you!
+        </div>
+        <div class="row">
+          <div class="col-50">
+            <div>100+</div>
+            <p>Frame Styles to Suit Every Personality</p>
+          </div>
+          <div class="col-50">
+            <div>5 Million</div>
+            <p>Over 5 Million Satisfied Customers</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="section2"></div>
+    <div class="section2 luxy-el" data-speed-y="0.15" data-offset="-50"></div>
 
     <!-- Custom Cursor -->
     <div class="cursor"></div>
+
+    <!-- Luxy.js -->
+    <script src="https://cdn.jsdelivr.net/npm/luxy.js@0.1.0/dist/luxy.min.js"></script>
+
+    <!-- Parallax.js CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/parallax-js@3.1.0/dist/parallax.min.js"
+      defer
+    ></script>
 
     <!-- Custom JS -->
     <script src="./js/script.js"></script>
