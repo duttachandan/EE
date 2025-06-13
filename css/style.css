@@ -270,15 +270,3 @@ h1 > span {
   min-height: 100vh;
 }
 
-@media screen and (max-width:768px) {
-  
-}
-
-@media screen and (max-width: 576px) {
-  .nav-logo > a {
-    width: 45px;
-  }
-  .navbar-brand {
-    transform: scale(0.5);
-  }
-}

@@ -6,9 +6,28 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //Paralax Js Initialization
 
+function isMobile() {
+  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
 window.addEventListener("load", () => {
   const scene = document.getElementById("scene");
-  new Parallax(scene);
+  if (!isMobile()) {
+    // Enable Parallax on desktop
+    new Parallax(scene, {
+      relativeInput: true,
+      hoverOnly: false,
+      clipRelativeInput: true,
+    });
+  } else {
+    // On mobile: OPTIONAL BEHAVIOR
+    // 1. Use gyroscope input (default behavior)
+    // 2. Or disable it completely
+    new Parallax(scene, {
+      relativeInput: false,
+      hoverOnly: false,
+    });
+  }
 });
 
 // Cursor Js Implementation

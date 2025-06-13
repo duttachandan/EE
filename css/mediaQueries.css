@@ -1,0 +1,21 @@
+@media screen and (max-width: 768px) {
+  .lb-cnt,
+  .rb-cnt {
+    top: 50%;
+    bottom: unset !important;
+    transform: translateY(-50%);
+  }
+  .lb-cnt > a,
+  .rb-cnt > a {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-logo > a {
+    width: 45px;
+  }
+  .navbar-brand {
+    transform: scale(0.5);
+  }
+}
