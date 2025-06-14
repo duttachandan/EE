@@ -4,10 +4,23 @@
     top: 50%;
     bottom: unset !important;
     transform: translateY(-50%);
+    max-width: 150px;
   }
   .lb-cnt > a,
   .rb-cnt > a {
     width: 30px;
+  }
+  .lb-heading + div,
+  .rb-heading + div {
+    font-size: 8px;
+  }
+  .lb-cnt > .row,
+  .rb-cnt > .row {
+    font-size: 10px;
+  }
+  .lb-cnt > .row > div.col-50 > div:first-child,
+  .rb-cnt > .row > div.col-50 > div:first-child {
+    font-size: 14px;
   }
 }
 

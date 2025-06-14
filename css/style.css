@@ -77,6 +77,50 @@ span {
   display: inline-block;
 }
 
+.title1,
+.bnr-wrpr > h1 {
+  -webkit-background-clip: text;
+  background: linear-gradient(
+    to left,
+    #b1540a,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 25%)
+  );
+  color: transparent;
+  background-clip: text;
+  font-family: objectivity-thin, serif;
+  font-size: 13.91vw;
+}
+
+.rb-num,
+.lb-num,
+h4,
+.title4 {
+  font-size: 4.08vw;
+  font-weight: 100;
+  font-family: objectivity-thin, serif;
+  background: linear-gradient(
+    to left,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 1.2vw;
+}
+
+.title3 {
+  font-size: 3.55vw;
+  font-family: objectivity-light;
+  color: transparent;
+  background: linear-gradient(to right, #7b7b7b, #e1e1e1);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 100;
+}
+
 /* Header Section */
 
 header {
@@ -154,20 +198,6 @@ nav {
   position: relative;
 }
 
-h1 {
-  -webkit-background-clip: text;
-  background: linear-gradient(
-    to left,
-    #b1540a,
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 25%)
-  );
-  color: transparent;
-  background-clip: text;
-  font-family: objectivity-thin, serif;
-  font-size: 13.91vw;
-}
-
 h1 > span {
   font-size: 5.47vw;
 }
@@ -206,22 +236,6 @@ h1 > span {
 .lb-cnt > a > img {
   width: 100%;
   object-fit: contain;
-}
-
-.rb-cnt > .rb-num,
-.lb-cnt > .lb-num {
-  font-size: 4.08vw;
-  font-weight: 100;
-  font-family: objectivity-thin, serif;
-  background: linear-gradient(
-    to left,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 1.2vw;
 }
 
 .rb-heading {
@@ -264,9 +278,24 @@ h1 > span {
   font-family: objectivity-thin, serif;
   color: rgba(255, 255, 255, 0.5);
 }
+.lb-cnt > .row > div.col-50 > div:first-child,
+.rb-cnt > .row > div.col-50 > div:first-child {
+  font-size: 2vw;
+  color: var(--secondary-color);
+}
+
+/* 
+===========
+About Section
+===========
+*/
+
+.about-section {
+  padding: 150px 0;
+  text-align: end;
+}
 
 /* Section Filler */
 .section2 {
   min-height: 100vh;
 }
-
