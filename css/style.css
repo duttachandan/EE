@@ -396,10 +396,10 @@ About Section
 }
 .bl {
   bottom: 4px;
-  right: 40px;
+  right: 4.69vw;
 }
 .br {
-  bottom: 90px;
+  bottom: calc(4.69vw * 3);
   right: 0;
 }
 
@@ -413,27 +413,46 @@ About Section
   right: 0;
   bottom: 0;
   background: white;
-  border-radius: 20px 0 0 0;
+  border-radius: 2.5vw 0 0 0;
   padding: 5px;
+  height: calc(4.69vw * 3); /*130px*/
+  width: calc(4.3vw + 5px); /*60px*/
 }
 .profiles > ul {
   padding: 2px;
   border: 1px solid #7b7b7b;
-  border-radius: 20px;
+  border-radius: 3vw;
+  height: fit-content;
+  margin: 0 auto;
+  width: fit-content;
 }
 .profiles > ul > li {
-  height: 25px;
+  height: calc(4.69vw - 5px); /*40px*/
+}
+
+.profile-link {
+  height: inherit;
 }
 
 .profile-link > img {
-  height: 25px;
-  width: 25px;
+  height: 100%;
+  width: calc(4.3vw - 5px);
   border-radius: 50%;
 }
+
 .img-icon {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 99;
+  height: 80px;
+  width: 80px;
+  padding: 5px;
+}
+
+.img-icon > img {
+  width: 100%;
+  object-fit: contain;
 }
 
 /* Section Filler */
