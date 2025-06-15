@@ -1,4 +1,19 @@
 @media screen and (max-width: 768px) {
+  .col-6 {
+    width: 100%;
+  }
+  p {
+    font-size: 12px;
+  }
+  .title3 {
+    font-size: 25px;
+  }
+  .title5 {
+    font-size: 18px;
+  }
+
+  /* Banner Section */
+
   .lb-cnt,
   .rb-cnt {
     top: 50%;
@@ -22,6 +37,18 @@
   .rb-cnt > .row > div.col-50 > div:first-child {
     font-size: 14px;
   }
+
+  /* About Section */
+  .about-section {
+    padding: 45px 0;
+  }
+  .about-section > .container > .row {
+    flex-direction: column-reverse;
+  }
+  .about-img {
+    max-width: 324px;
+  }
+  
 }
 
 @media screen and (max-width: 576px) {

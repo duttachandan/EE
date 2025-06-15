@@ -24,6 +24,8 @@
 :root {
   --primary-color: #40409d;
   --secondary-color: #ffffff;
+  --text-color: #cfcfcf;
+  --p-text-color: #7b7b7b;
 }
 
 html,
@@ -59,7 +61,8 @@ body {
   margin: 0 -15px;
 }
 
-.col-50 {
+.col-50,
+.col-6 {
   width: 50%;
   padding: 0 15px;
 }
@@ -113,12 +116,18 @@ h4,
 .title3 {
   font-size: 3.55vw;
   font-family: objectivity-light;
-  color: transparent;
-  background: linear-gradient(to right, #7b7b7b, #e1e1e1);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-weight: 100;
+}
+
+.title5 {
+  font-family: objectivity-thin, serif;
+  font-size: 2vw;
+  margin: 22px 0;
+}
+
+p {
+  font-family: objectivity-thin, serif;
+  font-size: 1vw;
+  margin-bottom: 3vw;
 }
 
 /* Header Section */
@@ -238,9 +247,9 @@ h1 > span {
   object-fit: contain;
 }
 
-.rb-heading {
+/* .rb-heading {
   font-size: 2.19vw;
-}
+} */
 
 .lb-cnt {
   max-width: 18.5vw;
@@ -293,6 +302,138 @@ About Section
 .about-section {
   padding: 150px 0;
   text-align: end;
+}
+
+.about-heading {
+  margin-top: 93px;
+}
+
+.about-heading > span {
+  position: relative;
+  color: transparent;
+  background: linear-gradient(to right, #7b7b7b, #e1e1e1);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 100;
+}
+
+.about-heading > span::after {
+  position: absolute;
+  content: "";
+  top: -50px;
+  right: 0;
+  height: 50px;
+  width: 80%;
+  background: url("../assets/img/01.png") center/contain no-repeat;
+}
+
+.about-subheading {
+  max-width: 536px;
+  margin-left: auto;
+  color: var(--text-color);
+}
+
+.about-subheading + p {
+  text-transform: capitalize;
+  color: var(--p-text-color);
+}
+
+.about-img {
+  max-width: 39vw;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 80px;
+  width: 80px;
+  background: white;
+  border-radius: 0 0 20px 0;
+  z-index: 22;
+}
+
+.about-img > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tl,
+.bl,
+.br,
+.tr {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: transparent;
+}
+
+.tl,
+.tr {
+  border-radius: 10px;
+  box-shadow: -9px -9px 0 white;
+}
+
+.br,
+.bl {
+  border-radius: 10px;
+  box-shadow: -2px -2px 0 white;
+}
+
+.tl {
+  top: 0;
+  left: 80px;
+}
+.tr {
+  top: 80px;
+  left: 0;
+}
+.bl {
+  bottom: 4px;
+  right: 40px;
+}
+.br {
+  bottom: 90px;
+  right: 0;
+}
+
+.bl,
+.br {
+  border-radius: 10px;
+  box-shadow: 5px 8px 0 white;
+}
+.profiles {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 20px 0 0 0;
+  padding: 5px;
+}
+.profiles > ul {
+  padding: 2px;
+  border: 1px solid #7b7b7b;
+  border-radius: 20px;
+}
+.profiles > ul > li {
+  height: 25px;
+}
+
+.profile-link > img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+.img-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* Section Filler */
