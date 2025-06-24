@@ -416,7 +416,7 @@ About Section
   border-radius: 2.5vw 0 0 0;
   padding: 5px;
   height: calc(4.69vw * 3); /*130px*/
-  width: calc(4.3vw + 5px); /*60px*/
+  width: calc(4.3vw + 5px + 2px); /*60px*/
 }
 .profiles > ul {
   padding: 2px;

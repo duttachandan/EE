@@ -30,6 +30,7 @@ window.addEventListener("load", () => {
   }
 });
 
+
 // Cursor Js Implementation
 
 const cursor = document.querySelector(".cursor");
@@ -50,3 +51,7 @@ function loop() {
 }
 
 requestAnimationFrame(loop);
+
+
+
+
