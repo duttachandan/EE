@@ -225,7 +225,7 @@ h1 > span {
 }
 .prsn-img > div > img {
   width: 100%;
-  max-height: 790px;
+  max-height: 500px;
   object-fit: contain;
 }
 
@@ -237,10 +237,40 @@ h1 > span {
   text-align: start;
   color: white;
 }
-.rb-cnt > a,
-.lb-cnt > a {
+.banner-links {
   width: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid var(--text-color);
+  height: 4vw;
+  border-radius: 50%;
+  padding: 10px;
+  overflow: hidden;
 }
+
+/* .banner-links::after {
+  content: "";
+  background: url("../assets/img/arrow-up-right.png") no-repeat center/cover;
+  height: calc(4vw - 20px);
+  width: calc(4vw - 20px);
+  display: block;
+  transform: translateX(100%);
+  transition: all 0.5s linear;
+}
+
+.banner-links:hover::after {
+  transform: translate(0, 0);
+} */
+
+/* .banner-links:hover > img {
+  transform: translate(50%, 50%);
+} */
+
+.lb-cnt > .banner-links {
+  margin-left: auto;
+}
+
 .rb-cnt > a > img,
 .lb-cnt > a > img {
   width: 100%;
@@ -458,4 +488,45 @@ About Section
 /* Section Filler */
 .section2 {
   min-height: 100vh;
+}
+
+/* Ultimate Collection Sections */
+
+.title2 {
+  font-size: 70px;
+  font-family: objectivity;
+  background: linear-gradient(to left, #9f9fff, #5959db, #212177);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.uc-cntn .title2 {
+  max-width: 408px;
+}
+
+.title2 > span {
+  font-size: 67px;
+  font-style: italic;
+  font-weight: 100;
+  font-family: "playfair", sans-serif;
+  background: linear-gradient(to right, #7b7b7b, #e1e1e1);
+  background-clip: text;
+  color: text;
+  -webkit-background-clip: text;
+}
+
+.uc-cntn > p {
+  max-width: 408px;
+  margin-top: 43px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .title2 {
+    font-size: 4.219vw;
+  }
+  .title2 > span {
+    font-size: 3.49vw;
+  }
 }

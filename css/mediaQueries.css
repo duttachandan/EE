@@ -36,7 +36,8 @@
   .col-6 {
     width: 100%;
   }
-  p {
+  p,
+  .uc-cntn > p {
     font-size: 12px;
   }
   .title3 {
@@ -44,6 +45,12 @@
   }
   .title5 {
     font-size: 18px;
+  }
+  .title2 {
+    font-size: 32px;
+  }
+  .title2 > span {
+    font-size: 24px;
   }
 
   /* Banner Section */
@@ -58,6 +65,8 @@
   .lb-cnt > a,
   .rb-cnt > a {
     width: 30px;
+    height: 30px;
+    padding: 8px;
   }
   .lb-heading + div,
   .rb-heading + div {
@@ -81,6 +90,11 @@
   }
   .about-img {
     max-width: 324px;
+  }
+
+  /* uc-section */
+  .uc-cntn > p {
+    margin-top: 20px;
   }
 }
 
