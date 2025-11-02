@@ -1,14 +1,32 @@
-// luxy.js Initialization
-
-window.addEventListener("DOMContentLoaded", () => {
-  luxy.init();
-});
-
-//Paralax Js Initialization
+//Finding the device 
+// (is it a mobile / iphone / ipad/ ipod device based on that we will use luxy js and parallax js over here)
 
 function isMobile() {
   return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
+
+
+// luxy.js Initialization
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (!isMobile()) {
+    luxy.init({
+      wrapper: "#luxy",
+      targets: ".luxy-el",
+      wrapperSpeed: 0.08
+    });
+    console.log(navigator.userAgent)
+    console.log("✅ Luxy initialized on desktop");
+  } else {
+    console.log(navigator.userAgent)
+    console.log("📱 Luxy disabled on mobile");
+  }
+});
+
+
+
+//Paralax Js Initialization
+
 
 window.addEventListener("load", () => {
   const scene = document.getElementById("scene");
@@ -29,6 +47,8 @@ window.addEventListener("load", () => {
     });
   }
 });
+
+
 
 
 // Cursor Js Implementation
